@@ -1,0 +1,77 @@
+<div class="container">
+  <h3>Add Book</h3>
+
+  <form class="form-inline mb-4">
+    <form
+      [formGroup]="bookForm"
+      (submit)="createBook()"
+      class="form-inline mb-4"
+    >
+      <label class="sr-only" for="Book Name">Book Name</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="bookName"
+          placeholder="Book Name"
+          [ngClass]="{ 'is-invalid': submitted && f.bookName.errors }"
+          required
+        />
+        <div *ngIf="submitted && f.bookName.errors" class="invalid-feedback">
+          <div *ngIf="f.bookName.errors.required">Book Name is required</div>
+        </div>
+      </div>
+
+      <label class="sr-only" for="Author Name">Author Name</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="authorName"
+          placeholder="Author Name"
+          [ngClass]="{ 'is-invalid': submitted && f.authorName.errors }"
+          required
+        />
+        <div *ngIf="submitted && f.authorName.errors" class="invalid-feedback">
+          <div *ngIf="f.authorName.errors.required">
+            Author Name is required
+          </div>
+        </div>
+      </div>
+
+      <label class="sr-only" for="Description">Description</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="description"
+          placeholder="Description"
+          [ngClass]="{ 'is-invalid': submitted && f.description.errors }"
+          required
+        />
+        <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+          <div *ngIf="f.description.errors.required">
+            Description is required
+          </div>
+        </div>
+      </div>
+
+      <label class="sr-only" for="Count">Count</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="count"
+          placeholder="Count"
+          [ngClass]="{ 'is-invalid': submitted && f.description.errors }"
+          required
+        />
+        <div *ngIf="submitted && f.count.errors" class="invalid-feedback">
+          <div *ngIf="f.count.errors.required">Count is required</div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary mb-2">Add Book</button>
+    </form>
+  </form>
+</div>

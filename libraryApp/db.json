@@ -1,0 +1,25 @@
+{
+  "books": [
+    {
+      "bookName": "Charlotte’s Web",
+      "authorName": "E.B. White",
+      "description": "This is a lovely novel that all age groups can understand. Aimed at native English speaking children, there are many adults who still say this famous book is their favorite.",
+      "count": "55",
+      "id": 6
+    },
+    {
+      "bookName": "Mieko and the Fifth Treasure",
+      "authorName": "Eleanor Coerr",
+      "description": "This book will keep you interested as you’ll learn many interesting things about Japan and its culture.",
+      "count": "43",
+      "id": 7
+    },
+    {
+      "bookName": "The Outsiders",
+      "authorName": "S.E. Hinton",
+      "description": "This short novel is perfect for EFL learners. It has modern themes and typical teenage issues that people around the world have experienced.",
+      "count": "15",
+      "id": 8
+    }
+  ]
+}

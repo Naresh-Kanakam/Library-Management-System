@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="mt-4">
+    <h3>Edit Book</h3>
+    <form
+      [formGroup]="bookForm"
+      (submit)="updateBook()"
+      class="form-inline mb-4"
+    >
+      <label class="sr-only" for="Book Name">Book Name</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="bookName"
+          placeholder="Book Name"
+        />
+      </div>
+
+      <label class="sr-only" for="Author Name">Author Name</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="authorName"
+          placeholder="Author Name"
+        />
+      </div>
+
+      <label class="sr-only" for="Description">Description</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="description"
+          placeholder="Description"
+        />
+      </div>
+
+      <label class="sr-only" for="Count">Count</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <input
+          type="number"
+          class="form-control"
+          formControlName="count"
+          placeholder="Count"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary mb-2">
+        Update Book
+      </button>
+    </form>
+  </div>
+  <router-outlet></router-outlet>
+</div>

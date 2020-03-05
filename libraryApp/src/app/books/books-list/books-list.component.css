@@ -1,0 +1,15 @@
+a {
+  color: #008cba !important;
+}
+a:hover {
+  cursor: pointer;
+}
+
+.headerDiv {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.searchBar {
+  width: 20%;
+}

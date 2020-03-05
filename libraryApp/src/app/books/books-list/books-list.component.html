@@ -1,0 +1,58 @@
+<div class="headerDiv">
+  <h3>Available Books</h3>
+
+  <input
+    class="form-control searchBar"
+    type="text"
+    name="search"
+    [(ngModel)]="searchBook"
+    placeholder="Search Book Here"
+  />
+
+  <button
+    routerLink="addbook"
+    routerLinkActive="active"
+    class="btn btn-primary mb-2"
+  >
+    Add Book
+  </button>
+</div>
+<table class="table table-hover">
+  <thead>
+    <tr style="background-color: #0089FF !important; color: white;">
+      <th scope="col">Book Name</th>
+      <th scope="col">Author Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Count</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td
+        colspan="5"
+        class="alert alert-danger"
+        *ngIf="error$ | async as error"
+      >
+        {{ error }}
+      </td>
+    </tr>
+    <tr></tr>
+    <tr *ngFor="let book of books$ | async | filterBook: searchBook">
+      <th scope="row">{{ book.bookName }}</th>
+      <td>{{ book.authorName }}</td>
+      <td style="word-break:break-all;">{{ book.description }}</td>
+      <td>{{ book.count }}</td>
+      <th>
+        <a
+          routerLink="editbook"
+          routerLinkActive="active"
+          (click)="editBook(book)"
+          >edit</a
+        >
+        <br />
+        <a (click)="deleteBook(book)">delete</a>
+      </th>
+    </tr>
+  </tbody>
+</table>
